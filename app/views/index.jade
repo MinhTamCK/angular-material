@@ -7,31 +7,52 @@ block vars
 
 block container
   div
-    div(layout='row')
-      div(flex='') toolbar
-    div(layout='row')
-      div(flex='30') First item in column
-      div(flex='70') Second item in column
-        div(layout="column")
-          div(flex)
-            p aaaaaaaa
-          div(flex)
-            p aaaaaaaa
-          div(flex)
-            p aaaaaaaa
+    div(layout="row", layout-padding)
+      h2 Input
+    div(layout='row', layout-padding)
+      div(flex="50", flex-xs)
+        md-input-container
+          label  Name
+          input(ng-model="userName")
+          p Name {{userName | json}}
+      div(flex="50", flex-xs)
+        md-input-container
+          label  Email
+          input(ng-model="email")
+          p Email {{email | json}}
 
-        //- div(layout="row")
-        //-   p  aaaaaaaaaaaaaa
-        //- div(layout="row")
-        //-   p  aaaaaaaaaaaaaa
-        //- div(layout="row")
-        //-   p  aaaaaaaaaaaaaa
-    //-   div(flex='grow')
-    //-     h1 Button
-    //-   div(flex='grow')
-    //-     md-button.md-primary primary button
-    //-     md-button.md-warn warning button
-    //-     md-button.md-accent accent button
-    //- div(layout="row")
-    //-   h1 CheckBox
+    div(layout="row", layout-padding)
+      h2 Checkbox
+    div(layout='row', layout-padding)
+      div(flex="50", flex-xs)
+        md-checkbox(ng-model="name1", ng-disabled="true") Default : {{ name | json }}
+      div(flex="50", flex-xs)
+        md-checkbox.md-primary(ng-init="name2 = true", ng-model="name2") Primary : {{ name2 | json }}
+    div(layout="row", layout-padding)
+      h2 Button
+    div(layout='row', layout-padding)
+      div(flex="50", flex-xs)
+        md-button(ng-model="name3", ng-disabled="true") Default : {{ name3 | json }}
+      div(flex="50", flex-xs)
+        md-button.md-primary.md-raised(ng-init="name4 = true", ng-model="name3") Primary : {{ name4 | json }}
+    div(layout="row", layout-padding)
+      h2 DatePicker
+    div(layout='row', layout-padding)
+      div(flex="100")
+        md-datepicker(ng-model="date", md-placeholder="Enter date", required)
+        p Date Choose : {{date | json}}
+    div(layout="row", layout-padding)
+      h2 Tabs
+    div(layout='row', layout-padding)
+      div(flex="100")
+        md-tabs.md-dynamic-height.md-border-bottom
+          md-tab(label="one")
+            md-content.md-padding
+              p hello word my name is Tam and i am a front-end developer.
+          md-tab(label="two")
+            md-content.md-padding
+              p hello this is content of tab two
+          md-tab(label="three")
+            md-content.md-padding
+              p hello this is content of tab three
 
