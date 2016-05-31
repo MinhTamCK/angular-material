@@ -1,0 +1,19 @@
+.tool-box.tool-box-bottom
+  .btn-group.visible-sm-up
+    +link({title: 'icon-file',attr: {class: 'btn btn-icon'}})
+      span.icon.icon-file
+      span.sr-only Download file
+    if !isDocuments
+      +link({title: 'icon-print', attr: {class: 'btn btn-icon'}})
+        span.icon.icon-print
+        span.sr-only Print file
+  .inner
+    .pagination(data-enter-page)
+      +link({title: 'previous',attr: {class: 'btn btn-control disabled'}})
+        span.icon.icon-left
+      .pagination-block
+        form.form-pagination(method="post", action="#", name="form-pagination")
+          +input({textLabel: 'pagination',  clasLabel: 'hidden', id:'inp-pagination-bottom', name: 'inp-pagination',class: 'form-control', value: '1'})
+        span.total-number 12
+      +link({title: 'next',attr: {class: 'btn btn-control'}})
+        span.icon.icon-right

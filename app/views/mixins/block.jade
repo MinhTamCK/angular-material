@@ -1,0 +1,5 @@
+mixin infomation-block(opts)
+  div&attributes(attributes)
+    h3.title-3!=opts.title
+    each item in opts.items
+      p!=item

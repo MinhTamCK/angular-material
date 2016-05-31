@@ -1,0 +1,22 @@
+.tool-box
+  .btn-group.visible-sm-up
+    +link({title: 'title file', href: '#download-list'})(role="button", data-toggle="collapse", aria-expanded="false", aria-controls="download-list").btn.btn-icon
+      span.icon.icon-file
+      span.sr-only Download file
+    if !isDocuments
+      +link({title: 'icon-print', attr: {class: 'btn btn-icon'}})
+        span.icon.icon-print
+        span.sr-only Print file
+  .inner
+    if isToolButton
+      +link({title: 'Formuler une observation', href: '#form-observation'})(role="button", data-toggle="collapse", aria-expanded="true", aria-controls="form-observation").btn.btn-1.orange
+    .pagination(data-enter-page)
+      +link({title: 'previous', href: 'fr/indications-geographiques/indications-geo/rechercher.html',attr: {class: 'btn btn-control disabled'}})
+        span.icon.icon-left
+      .pagination-block
+        form.form-pagination(method="post", action="#", name="form-pagination")
+          +input({textLabel: 'pagination', clasLabel: 'hidden', name:'inp-pagination', class: 'form-control', value: '1'})
+        span.total-number 12
+      +link({title: 'next',attr: {class: 'btn btn-control'}})
+        span.icon.icon-right
+

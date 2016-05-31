@@ -1,0 +1,12 @@
+mixin detail-block()
+  include ../blocks/detail-heading
+  include ../blocks/tool-box
+  if(isDocuments)
+    include ../blocks/document-download
+  if(isToolButton)
+    include ../blocks/form-popin
+  .content
+    include ../blocks/nav-tab-detail
+    if block
+      block
+  include ../blocks/tool-box-bottom

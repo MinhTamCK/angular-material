@@ -1,0 +1,61 @@
+#form-observation.full-content-block.form-popin
+  +form({name: 'frm-observation'})
+    fieldset.fieldset-form
+      .heading-popin.text-center
+        h2.title-1 Formuler une observation sur l'IG Raquette basque
+        p Attention : Dans le cadre de la procédure, les informations saisies seront transmises dans leur intégralité à l'INPI ainsi qu'au demandeur de l'IG (organisme de défense et de gestion). Les champs signalés par un * sont obligatoires.
+      .row
+        .form-group
+          .col-md-8.col-md-offset-2
+            label(for="vous-etes") Vous êtes *
+          .col-md-6.col-md-offset-2
+            .input-group
+              input(name="vous-etes", id="vous-etes" type="text").form-control
+              .input-group-addon
+                span.icon.icon-arrows-updown
+          .col-md-2
+            +button({name: 'envoyer', type: 'button'}).btn.btn-1.orange Envoyer
+    .form-container
+      fieldset.fieldset-form
+        .form-group
+          p Votre Votre civilité *
+          .inline-elm
+            +radio-custom({name: 'vivilite', id: 'monsieur', textLabel: 'Monsieur', checked: true})
+            +radio-custom({name: 'vivilite', id: 'madame', textLabel: 'Madame'})
+        .row
+          .form-group
+            .col-sm-6
+              +input({name: 'nom', textLabel: 'Votre nom *'}).form-control
+            .col-sm-6
+              +input({name: 'pre-nom', textLabel: 'Votre Prénom *'}).form-control
+          .form-group
+            .col-sm-6
+              +input({name: 'societe', textLabel: 'Vous société *'}).form-control
+            .col-sm-6
+              +input({name: 'mel', textLabel: 'Votre mél *'}).form-control
+      fieldset.fieldset-form
+        .row
+          .col-sm-6
+            .form-group
+              label(for="nature-lavis") Nature de l’avis *
+                a(title="tooltip", href="javascript:void(0)").icon-tooltip
+                  span.sr-only tooltip
+              .input-group
+                input(name="nature-lavis", type="text").form-control
+                .input-group-addon
+                  span.icon.icon-arrows-updown
+            .files-group
+              .form-group
+                label(for="") Pièces jointes éventuelles (5 pièces ou 8Mo au maximum)
+                  a(title="tooltip", href="javascript:void(0)").icon-tooltip
+                    span.sr-only tooltip
+                .file-elm
+                  ul.list-file
+
+          .col-sm-6
+            .form-group
+              label(for="message") Description de l'observation *
+                a(title="tooltip", href="javascript:void(0)").icon-tooltip
+                  span.sr-only tooltip
+              textarea(name="message", id="message", class="form-control textarea", placeholder="3000 caractères maximim, au-delà, utilisez les pièces jointes")
+

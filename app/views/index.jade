@@ -1,0 +1,37 @@
+extends layouts/layout
+
+block vars
+  -title = 'Homepage'
+  -bodyClass = 'home'
+  -menuIndex = 0
+
+block container
+  div
+    div(layout='row')
+      div(flex='') toolbar
+    div(layout='row')
+      div(flex='30') First item in column
+      div(flex='70') Second item in column
+        div(layout="column")
+          div(flex)
+            p aaaaaaaa
+          div(flex)
+            p aaaaaaaa
+          div(flex)
+            p aaaaaaaa
+
+        //- div(layout="row")
+        //-   p  aaaaaaaaaaaaaa
+        //- div(layout="row")
+        //-   p  aaaaaaaaaaaaaa
+        //- div(layout="row")
+        //-   p  aaaaaaaaaaaaaa
+    //-   div(flex='grow')
+    //-     h1 Button
+    //-   div(flex='grow')
+    //-     md-button.md-primary primary button
+    //-     md-button.md-warn warning button
+    //-     md-button.md-accent accent button
+    //- div(layout="row")
+    //-   h1 CheckBox
+

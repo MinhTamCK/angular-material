@@ -1,0 +1,49 @@
+// Common
+ul, ol {
+  margin: 0;
+}
+.title-1 {
+  font-size: rem-calc(21px);
+  font-family: $font-inpi-bold;
+  margin: rem-calc(0 0 20px);
+}
+.title-2 {
+  font-family: $font-inpi-regular;
+  font-size: rem-calc(28px);
+}
+.title-3 {
+  font-family: $font-inpi-bold;
+  font-size: rem-calc(15px);
+  line-height: rem-calc(22px);
+  margin: rem-calc(0 0 10px);
+}
+.bold {
+  font-family: $font-inpi-bold;
+}
+
+.information-block {
+  margin-bottom: rem-calc(25px);
+  padding: rem-calc(20px 30px);
+  border: 1px solid $gray-1;
+  p {
+    font-size: rem-calc(15px);
+    &:last-child { margin-bottom: 0;}
+  }
+}
+.overflow-x {
+  .wrapper {overflow-x: hidden;}
+}
+.badge {
+  padding: rem-calc(4px 6px);
+  font-size: rem-calc(10px);
+  color: $white;
+  font-family: $font-family-sans-serif;
+  font-weight: bold;
+  background-color: $orange-1;
+}
+@media #{$screen-sm-up} {
+  .information-block {
+    min-height: rem-calc(116px);
+    margin-bottom: rem-calc(45px);
+  }
+}
