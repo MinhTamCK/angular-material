@@ -13,34 +13,34 @@ block container
       div(flex="50", flex-xs)
         md-input-container
           label  Name
-          input(ng-model="userName")
-          p Name {{userName | json}}
+          input(ng-model="vm.userName")
+          p Name {{vm.userName | json}}
       div(flex="50", flex-xs)
         md-input-container
           label  Email
-          input(ng-model="email")
-          p Email {{email | json}}
+          input(ng-model="vm.email")
+          p Email {{vm.email | json}}
 
     div(layout="row", layout-padding)
       h2 Checkbox
     div(layout='row', layout-padding)
       div(flex="50", flex-xs)
-        md-checkbox(ng-model="name1", ng-disabled="true") Default : {{ name | json }}
+        md-checkbox(ng-model="vm.name1", ng-disabled="true") Default : {{ vm.name | json }}
       div(flex="50", flex-xs)
-        md-checkbox.md-primary(ng-init="name2 = true", ng-model="name2") Primary : {{ name2 | json }}
+        md-checkbox.md-primary(ng-init="vm.name2 = true", ng-model="vm.name2") Primary : {{ vm.name2 | json }}
     div(layout="row", layout-padding)
       h2 Button
     div(layout='row', layout-padding)
       div(flex="50", flex-xs)
-        md-button(ng-model="name3", ng-disabled="true") Default : {{ name3 | json }}
+        md-button(ng-model="vm.name3", ng-disabled="true") Default : {{ vm.name3 | json }}
       div(flex="50", flex-xs)
-        md-button.md-primary.md-raised(ng-init="name4 = true", ng-model="name3") Primary : {{ name4 | json }}
+        md-button.md-primary.md-raised(ng-click="vm.showAlert()") Primary : {{ vm.name4 | json }}
     div(layout="row", layout-padding)
       h2 DatePicker
     div(layout='row', layout-padding)
       div(flex="100")
-        md-datepicker(ng-model="date", md-placeholder="Enter date", required)
-        p Date Choose : {{date | json}}
+        md-datepicker(ng-model="vm.date", md-placeholder="Enter date", required)
+        p Date Choose : {{vm.date | json}}
     div(layout="row", layout-padding)
       h2 Tabs
     div(layout='row', layout-padding)
@@ -51,8 +51,8 @@ block container
               p hello word my name is Tam and i am a front-end developer.
           md-tab(label="two")
             md-content.md-padding
-              p hello this is content of tab two
+              p hello this is content of tab two.
           md-tab(label="three")
             md-content.md-padding
-              p hello this is content of tab three
+              p hello this is content of tab three.
 
